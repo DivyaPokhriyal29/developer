@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dongle&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap");
+
+:root {
+  --pure: rgb(225, 234, 247);
+  --blue: rgb(96, 127, 246);
+  --span: rgb(144, 144, 144);
+  --input_back: rgb(247, 250, 255);
+  --submit: rgb(82, 111, 222);
+  --left: rgb(247, 250, 255);
+  --right: linear-gradient(rgba(0, 115, 255, 0.53), rgba(0, 0, 0, 0.517)),
+    url(back.jpg);
+  --body: linear-gradient(
+    to right,
+    var(--pure) 0%,
+    var(--pure) 50%,
+    var(--blue) 50%,
+    var(--blue) 100%
+  );
+
+  --title1: "Montserrat", sans-serif;
+  --title2: "Dongle", sans-serif;
+  --input: "Nunito", sans-serif;
+
+  --wrapper_box: 0 0 50px 10px rgba(17, 43, 79, 0.15);
+  --icon_box: 0 5px 10px 1px rgba(17, 43, 79, 0.1);
+  --icon_box_hover: 0 8px 10px 2px rgba(17, 43, 79, 0.15);
+  --input_box: 0 5px 10px 1px rgba(17, 43, 79, 0.1);
+  --input_hover: inset 4px 4px 6px -1px rgba(17, 43, 79, 0.1),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(0, 0, 0, 0.15), 0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+    0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  cursor: default;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 60%;
+  justify-content: center;
+  align-content: center;
+  background: var(--body);
+  transition: all 0.5s;
+}
+.wrapper {
+  width: 100%;
+  height: 88vh;
+  border-radius: 17px;
+  box-shadow: var(--wrapper_box);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+.left {
+  background: var(--left);
+  transition: 0.3s;
+  overflow: hidden;
+  display: grid;
+  align-content: center;
+}
+.logo img {
+  width: 65px;
+  border-radius: 7px;
+  box-shadow: var(--icon_box);
+  filter: hue-rotate(250deg);
+  transition: 0.3s;
+}
+.logo img:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--icon_box_hover);
+}
+.form_heading {
+  font-family: var(--input);
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.inp_name {
+  width: 61%;
+  font-family: var(--input);
+  text-align: left !important;
+  font-weight: lighter;
+  font-size: 12px;
+  color: var(--span);
+  margin-bottom: -15px !important;
+}
+.input {
+  outline: none;
+  border: none;
+  width: 55%;
+  background: var(--input_back);
+  font-family: var(--input);
+  padding: 0.65rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  box-shadow: var(--input_box);
+  border: 0.1px solid transparent;
+  transition: 0.1s;
+}
+.input:focus,
+.input:hover {
+  color: var(--blue);
+  border: 0.1px solid rgba(0, 0, 0, 0.01);
+  transform: translateY(2px);
+  box-shadow: var(--input_hover);
+}
+.reset_bar {
+  width: 61%;
+  display: grid;
+  grid-template-columns: 0.5fr 5fr 5fr;
+  margin-bottom: 20px;
+}
+.tikmark {
+  margin-right: 5px;
+  cursor: pointer;
+}
+.label {
+  text-align: left;
+  font-family: var(--input);
+  font-size: 12px;
+  cursor: pointer;
+}
+.reset {
+  text-align: right;
+  text-decoration: none;
+  font-family: var(--input);
+  font-size: 12px;
+  color: var(--blue);
+}
+.submit {
+  outline: none;
+  border: none;
+  width: 62%;
+  font-family: var(--input);
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: #fff;
+  background: var(--blue);
+  margin-bottom: 45px;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 13px;
+}
+.submit:hover {
+  background: var(--submit);
+}
+.others {
+  width: 61%;
+  font-family: var(--input);
+  font-size: 12px;
+}
+.others a {
+  text-decoration: none;
+  color: var(--blue);
+}
+.right {
+  background: var(--right);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  overflow: hidden !important;
+  transition: 1s;
+}
+.title1 {
+  font-family: var(--title1);
+  color: #fff;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+  transition: 0.5s;
+}
+.title2 {
+  font-family: var(--title2);
+  color: #fff;
+  font-size: 21px;
+  line-height: 18px;
+  transition: 0.5s;
+}
+.space_dot {
+  opacity: 0;
+}
+
+/* for registration */
+.form_heading2 {
+  margin-top: 10px !important;
+  margin-bottom: 20px !important;
+}
+.reset_bar2 {
+  grid-template-columns: 0.5fr 10fr;
+}
+.submit2 {
+  margin-bottom: 30px !important;
+}
